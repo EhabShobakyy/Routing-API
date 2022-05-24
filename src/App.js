@@ -3,6 +3,7 @@ import UsersPage from "./Pages/UsersPage";
 import UserPage from "./Pages/UserPage";
 import EditUserPage from "./Pages/EditUserPage";
 import CreateUserPage from "./Pages/CreateUserPage";
+import NotFound from "./Pages/NotFoundPage";
 import "./App.css"
 const HomePage = () => {
   return <div>Home Page</div>;
@@ -25,8 +26,9 @@ function App() {
         <Route path='/about' component={AboutPage} />
         <Route path='/users/create' exact component={CreateUserPage} /> 
         <Route path='/users' exact component={UsersPage} />
-         <Route path='/users/:id' exact component={UserPage} />
+        <Route path='/users/:id' exact component={UserPage} />
         <Route path='/users/edit/:id' component={EditUserPage} />
+        <Route component={NotFound} />
         </Switch>
       </div>
       </Router>
