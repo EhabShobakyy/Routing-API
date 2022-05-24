@@ -1,6 +1,8 @@
 import React from 'react';
 import {Formik,Form,Field,ErrorMessage} from "formik";
-import * as Yup from "yup";              // For Vslidation
+import * as Yup from "yup";
+import { Prompt } from "react-router-dom";
+             // For Vslidation
 export default function userForm(props) {
 
     const schema = Yup.object().shape({
@@ -15,6 +17,7 @@ export default function userForm(props) {
         validationSchema={schema}
         render={props => {
             return <Form> 
+                <Prompt when={props.dirty} message={'Sure ?'} />       
                 <label>Name :</label> <br />
                 <Field name="name" />
                 <ErrorMessage name="name" /><br />

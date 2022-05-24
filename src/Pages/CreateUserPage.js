@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import {addUser } from "./API/Users";
-import UserForm  from "../Components/UserForm";
+import UserForm from "../Components/UserForm";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default class CreateUserPage extends Component{
